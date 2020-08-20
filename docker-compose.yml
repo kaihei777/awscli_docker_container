@@ -1,0 +1,12 @@
+version: '3'
+services:
+  build:
+    container_name: awscli_docker_container
+    image: kaihei777/awscli_v1_docker_container:latest
+    build:
+      context: .
+    command: >
+      sh -c "node -v &&
+             npm -v &&
+             aws --version 
+            "
